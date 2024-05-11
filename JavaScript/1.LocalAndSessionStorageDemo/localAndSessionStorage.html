@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local & Session Storage Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #items {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Demenstroation of Local & Session Storage Example</h2>
+    <h1>Online Shopping Cart</h1>
+    <label>Select an item : </label>
+    <select id="items">
+        <option value="101,Pen,10">Pen - $10</option>
+        <option value="102,Highlighter,20">Highlighter - $20</option>
+        <option value="103,Stapler,30">Stapler- $30</option>
+        <option value="104,Notebooks,40">Notebooks - $40</option>
+    </select>
+    <br>
+    <button onclick="addItem()">Add to cart ( Local Storage )</button>
+    <button onclick="addItemsSession()">Add to cart ( Session Storage )</button>
+    <button onclick="viewCart()">View Cart</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
