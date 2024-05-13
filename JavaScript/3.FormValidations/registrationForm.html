@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Demo</title>
+    <style>
+        .required{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Registration Form</caption>
+        <!-- <caption>Form Validations Using JS </caption> -->
+        <form method="post" onsubmit="return validateData()">
+            <!-- username input type = text -->
+            <tr>
+                <td><label for="userName">Name : </label></td>
+                <td><input type="text" name="userName" id="userName1" required minlength="3"> <span class="required">*</span></td>
+                <td id="errUser"></td>
+            </tr>
+            <!-- mobile number -->
+            <tr>
+                <td><label for="mob">Mobile :</label></td>
+                <td><input type="text" name="mob" id="mob" pattern="^[0-9]{10}$" required/></td>
+            </tr>
+            <!-- address input type = textarea-->
+            <tr>
+                <td><label for="addr">Address</label></td>
+                <td><textarea name="addr" rows="5" cols="20" id="addr"></textarea></td>
+                <td id="errAddr"></td>
+            </tr>
+            <!-- Joining Date input type = date -->
+            <tr>
+                <td><label for="date">Date of joining</label></td>
+                <td><input type="date" name="date" id="date" min="2024-05-06" max="2024-06-02"></input></td>
+            </tr>
+            <!-- Gender input type = radio button  -->
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label>Male</label>
+                    <input type="radio" name="gender" id="Female" value="Female">
+                    <label>Female</label>
+                </td><td id="errGender"></td> 
+            </tr>
+            <!-- Degree input type = radio button -->
+            <tr>
+                <td><label for="degree">Degree</label></td>
+                <td>
+                    <input type="radio" name="degree" id="BTECH" value="BTECH" >
+                    <label for="BTECH">BTech</label>
+                    <input type="radio" name="degree" id="BE" value="BE">
+                    <label for="BE">BE</label>
+                    <input type="radio" name="degree" id="phd" value="phd">
+                    <label for="phd">Phd</label>
+                </td><td id="errDegree"></td>
+            </tr>
+            <!-- Skills input type = checkbox -->
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Select skills </legend>
+                        <input type="checkbox" name="skill" id="java" value="java"/>
+                        <label for="java">JAVA</label>
+                        <input type="checkbox" name="skill" id="C++" value="C++"/>
+                        <label for="C++">C++</label>
+                        <input type="checkbox" name="skill" id="python" value="python"/>
+                        <label for="python">python</label>
+                        <input type="checkbox" name="skill" id="Devops" value="Devops"/>
+                        <label for="Devops">Devops</label>
+                    </fieldset>
+                </td>
+                <td id="errSkills"></td>
+            </tr>
+            <!-- City input type = dropdown -->
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="city" id="city">
+                        <option value="test">------Select One------</option>
+                        <option value="pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Nashik">Nashik</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+                </td>
+                <td id="errCity"></td>
+            </tr>
+            <!-- Submit Button -->
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" name="submitBtn" id="submitBtn" value="register">Register</button>
+                    <button type="reset" name="restBtn" id="restBtn" value="reset">Reset</button>
+                </td>
+            </tr>
+        </form>
+    </table>  
+    <script src="script.js"></script>
+</body>
+</html>

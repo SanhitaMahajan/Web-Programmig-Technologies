@@ -1,0 +1,4 @@
+-- In javaScript usually form validations happens in onsubmit event which has to be handled in form tag. 
+-- return keyword is mandatory while calling handler 
+-- If onsubmit validate function returns true then it submit the page to server 
+-- If validate returns false, it will remain in same page and it will display error message. 
