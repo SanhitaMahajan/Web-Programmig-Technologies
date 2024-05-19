@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product Form</title>
+</head>
+<body>
+    <form action="/updateProduct/<%=prod[0].pid%>" method="post">
+        Product ID: <input type="text" name="pid" id="pid" value="<%= prod[0].pid %>" readonly> <br> <br>
+        Product Name: <input type="text" name="pname" id="pname" value="<%= prod[0].pname %>"> <br> <br>
+        Product Quantity: <input type="text" name="quantity" id="quantity" value="<%= prod[0].quantity %>"> <br> <br>
+        Product Price: <input type="text" name="price" id="price" value="<%= prod[0].price %>"> <br> <br>
+        <button type="submit" name="editProd" id="editProd">Update Product</button>        
+    </form>
+</body>
+</html>
