@@ -4,6 +4,31 @@ const router = express.Router()
 //  database connections
 const connection = require("../db/dbConnection")
 
+// display login form 
+router.get("/",function(req,resp){
+    resp.render("login")
+})
+
+// validate user 
+router.post("/validateUser", function(req, resp) {
+    // console.log(req.body.username);
+    // console.log(req.body.pass);
+    connection.query("SELECT * FROM loginProduct WHERE username=? AND password=? ", [req.body.username, req.body.pass], function(err, result) {
+      if (err) {
+        console.error("Error occurred", err);
+        resp.status(500).send("Internal Server Error");
+      } else {
+        if (result.length > 0) {
+          console.log("User logged in successfully");
+          resp.redirect("/product");
+        } else {
+          console.log("Invalid login attempt");
+          resp.status(401).send("<h2>Invalid login</h2>");
+        }
+      }
+    });
+});
+
 //get all products from database and display it in table format
 router.get("/product", function(req,resp){
     connection.query("select * from productJS ", function(err,data){
