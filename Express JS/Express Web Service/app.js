@@ -14,12 +14,6 @@ app.use(bodyParser.json())
 ///url specific functions
 app.use("/",routes)
 
-// set up session 
-app.use(session({
-    secret:"mysecretkey",
-    resave:true,
-    saveUninitialized:true
-}))
 
 app.listen(3001,function(){
     console.log("Server running at port 3001")
