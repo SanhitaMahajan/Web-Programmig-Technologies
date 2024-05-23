@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names</title>
+    <script src="./name.js"></script>
+</head>
+<body onload="displayList()">
+    <h4>Form</h4>
+    Name : <input type="text" name="name" id="name"> <br> <br>
+    <button type="button" name="addBtn" id="addBtn" onclick="addName()">Add</button>
+    <button type="button" name="deleteBtn" id="deleteBtn" onclick="deleteName()">Delete</button>
+    <button type="button" name="searchBtn" id="searchBtn" onclick="searchName()">search</button>
+    <h4>List of names</h4>
+    <div id="nameDiv">
+
+    </div>
+</body>
+</html>
