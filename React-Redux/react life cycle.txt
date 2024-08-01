@@ -1,0 +1,31 @@
+
+
+REACT LIFE CYCLE
+-> Series of events that happens from birth of react component to its death. 
+
+
+REACT LIFE CYCLE EVENTS 
+-> Every component in react goes through a lifecycle of events. 
+
+
+1. Mounting - birth of your component 
+2. Update - Growth of your component 
+3. Unmounting - Death of your component 
+
+
+REACT LIFECYCLE METHODS 
+
+1. render()
+2. componentDidMount() - is a best place to use API calls to initialize state
+3. componentDidUpdate()
+4. componentWillUnmount() - cleanup actions, cannot modify component state, this component will never be re-rendered and because of that we cannot call setState() during this lifecycle method 
+
+Uncommon Ract LifeCycle Methods 
+
+1. shouldComponentUpdate() - this method is used when you want react to prevent rendering of your component, cannot update component state in shouldComponentUpdate() lifecycle
+2. static getDerivedStateFromProps() - newer lifeCycle method, this lifecycle method is fired on every render, called just before calling render(), static function does not have access to "this" returns an object to update state in response to prop changes. 
+3. getSnapshotBeforeUpdate() - newer lifecycle method introduced recently, this lifecycle is called right before DOM update. 
+
+
+Deep dive in life cycle method 
+https://javascript.plainenglish.io/react-lifecycle-methods-a-deep-dive-f97c4553c5c2

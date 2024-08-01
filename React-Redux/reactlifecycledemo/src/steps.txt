@@ -1,0 +1,14 @@
+
+1. Constructor: The constructor runs once when the component is initialized.
+
+2. Render: The render method is called whenever the state or props of the component change. Since you have a `setState` call inside `incrementCount`, it triggers a re-render every time the state changes.
+
+3. ComponentDidMount: This method is called once after the component is mounted in the DOM.
+
+4. ComponentDidUpdate: This method is called every time the component updates, except for the initial render. Since you have `setState` in `incrementCount`, it updates the component state, triggering `componentDidUpdate`.
+
+5. ShouldComponentUpdate: This method is called before rendering, when new props or state are being received. Returning `true` from this method will trigger a re-render. In your case, it's returning `true`, hence the re-renders.
+
+6. GetSnapshotBeforeUpdate: This method is called right before the changes from the virtual DOM are to be reflected in the DOM.
+
+7. ComponentWillUnmount: This method is called just before the component is removed from the DOM.
